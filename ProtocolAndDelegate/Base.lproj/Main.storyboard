@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProtocolAndDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="9gR-cP-bmI">
+                                <rect key="frame" x="136.5" y="373" width="141" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfE-1M-USk" userLabel="Button1Info">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-ty-eac" userLabel="ChooseButton">
+                                        <rect key="frame" x="0.0" y="114" width="141" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Choose Button"/>
+                                        <connections>
+                                            <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="me4-CV-tUn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9gR-cP-bmI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Py1-aJ-4RI"/>
+                            <constraint firstItem="9gR-cP-bmI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mZe-iQ-X9j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonInfoLabel" destination="bfE-1M-USk" id="rmn-fj-UlU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652.17391304347836" y="56.919642857142854"/>
+        </scene>
+        <!--Delegate View Controller-->
+        <scene sceneID="UsW-rl-YPz">
+            <objects>
+                <viewController storyboardIdentifier="DelegateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ne-SX-qTU" customClass="DelegateViewController" customModule="ProtocolAndDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ENm-0g-EgH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="112" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-ju-qYl">
+                                <rect key="frame" x="140.5" y="356" width="133" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpU-gM-mTr">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Click Button 1"/>
+                                        <connections>
+                                            <action selector="button1Tapped:" destination="2ne-SX-qTU" eventType="touchUpInside" id="e9q-nG-gwg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j87-V5-0xr">
+                                        <rect key="frame" x="0.0" y="148" width="133" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Click Button 2"/>
+                                        <connections>
+                                            <action selector="button2Tapped:" destination="2ne-SX-qTU" eventType="touchUpInside" id="63V-Zk-Hph"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qOp-ju-qYl" firstAttribute="centerY" secondItem="ENm-0g-EgH" secondAttribute="centerY" id="BHv-uO-d7A"/>
+                            <constraint firstItem="qOp-ju-qYl" firstAttribute="centerX" secondItem="ENm-0g-EgH" secondAttribute="centerX" id="sDm-xs-fKH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i6i-BY-zkU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWL-NP-0p9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.28985507246378" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+</document>
